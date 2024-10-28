@@ -6,11 +6,10 @@ class BelfoldiJarat(Jarat):
     Belfoldi jaratokra vonatkozó osztaly, amelyek olcsobbak es rovidebbek.
 
     Attributomok:
-        celallomasokBelfold (list[str]) : belfoldi celallomasok listaja
-        tovabbiak megegyeznek az ososztalyeval
+        megegyeznek az ososztalyeval (Jarat)
     """
 
-    def __init__(self, celallomasokBelfold, jaratszam, legitarsasag, celallomas, jegyar):
+    def __init__(self, jaratszam: int, legitarsasag: LegiTarsasag, celallomas: str, jegyar: int):
         if jegyar > 100000:
             print("Hiba! Belfoldi jegyar nem lehet magasabb mint 100.000! Nem jott letre a jarat.")
         elif celallomas not in celallomasokBelfold:

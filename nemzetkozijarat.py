@@ -6,12 +6,11 @@ class NemzetkoziJarat(Jarat):
     Nemzetkozi jaratokra vonatkozo osztaly, magasabb jegyarakkal.
 
     Attributumok:
-        celallomasokBelfold (list[str]) : belfoldi celallomasok listaja
-        a tovabbiak megegyeznek az ososztalyeval
+        megegyeznek az ososztalyeval (Jarat)
     """
 
 
-    def __init__(self, celallomasokBelfold, jaratszam, legitarsasag, celallomas, jegyar):
+    def __init__(self, jaratszam: int, legitarsasag: LegiTarsasag, celallomas: str, jegyar: int):
         if jegyar < 100000:
             print("Figyelem: alacsony jegyar nemzetkozi jaratra!")
         if celallomas in celallomasokBelfold:
