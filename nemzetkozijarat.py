@@ -10,10 +10,11 @@ class NemzetkoziJarat(Jarat):
     """
 
 
-    def __init__(self, jaratszam: int, legitarsasag: LegiTarsasag, celallomas: str, jegyar: int):
+    def __init__(self, jaratszam: int, legitarsasag: LegiTarsasag, celallomas: str,
+                 indulaskapacitas: Dict[datetime, int], jegyar: int):
         if jegyar < 100000:
             print("Figyelem: alacsony jegyar nemzetkozi jaratra!")
         if celallomas in celallomasokBelfold:
             print("Hiba! Ez belfoldi celallomas! Nem jott letre a jarat.")
         else:
-            super().__init__(jaratszam, legitarsasag, celallomas, jegyar)
+            super().__init__(jaratszam, legitarsasag, celallomas, indulaskapacitas, indulaskapacitas, jegyar)
