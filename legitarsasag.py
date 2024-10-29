@@ -1,4 +1,5 @@
 from jarat import Jarat
+from typing import List
 
 
 class LegiTarsasag:
@@ -10,6 +11,16 @@ class LegiTarsasag:
         jaratok (list[Jarat]): legitarsasag jaratai
     """
 
-    def __init__(self, nev: str, jaratok: list[Jarat]):
+    def __init__(self, nev: str):
         self.nev = nev
-        self.jaratok = jaratok
+        self.jaratok: List[Jarat] = []
+        print("Legitarsasag letrejott.")
+
+    def __str__(self):
+        jaratokstring = ""
+        if self.jaratok:
+            for jarat in self.jaratok:
+                jaratokstring += f"\t{jarat}\n"
+        else:
+            jaratokstring += "(meg nincs jarat)"
+        return f"legitarsasag neve: {self.nev}; jaratok: \n{jaratokstring}"

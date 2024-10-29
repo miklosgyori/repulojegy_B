@@ -1,3 +1,6 @@
+from jarat import Jarat
+
+
 class BelfoldiJarat(Jarat):
     """
     Belfoldi jaratokra vonatkozó osztaly, amelyek olcsobbak es rovidebbek.
@@ -7,8 +10,8 @@ class BelfoldiJarat(Jarat):
     """
 
     def __init__(self, legitarsasagnev: str, jaratszam: int, indulasiallomas: str, celallomas: str,
-                 indulas: datetime, kapacitas: int, jegyar: int):
+                 indulas: str, kapacitas: int, jegyar: int):
         if jegyar > 100000:
             print("Hiba! Belfoldi jegyar nem lehet magasabb mint 100.000! Nem jott letre a jarat.")
         else:
-            super().__init__(self, legitarsasagnev, jaratszam, indulasiallomas, celallomas, indulas, kapacitas, jegyar)
+            super().__init__(legitarsasagnev, jaratszam, indulasiallomas, celallomas, indulas, kapacitas, jegyar)

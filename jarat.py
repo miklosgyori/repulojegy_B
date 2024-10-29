@@ -1,5 +1,4 @@
 from abc import ABC
-from datetime import datetime
 
 
 class Jarat(ABC):
@@ -17,7 +16,7 @@ class Jarat(ABC):
     """
 
     def __init__(self, legitarsasagnev: str, jaratszam: int, indulasiallomas: str, celallomas: str,
-                 indulas: datetime, kapacitas: int, jegyar: int):
+                 indulas: str, kapacitas: int, jegyar: int):
         self.legitarsasagnev = legitarsasagnev
         self.jaratszam = jaratszam
         self.indulasiallomas = indulasiallomas
@@ -25,7 +24,8 @@ class Jarat(ABC):
         self.indulas = indulas
         self.kapacitas = kapacitas
         self.jegyar = jegyar
+        print("Jarat letrejott.")
 
     def __str__(self):
-        return (f"{self.legitarsasagnev}-{self.jaratszam}: {self.indulasiallomas} --> {self.celallomas}; {self.indulas};"
-                f"szabad helyek: {self.kapacitas}; ar: {self.jegyar}")
+        return (f"jarat kod: {self.legitarsasagnev}-{self.jaratszam}: {self.indulasiallomas} --> {self.celallomas}; "
+                f"indulas: {self.indulas}; szabad helyek: {self.kapacitas}; ar: {self.jegyar}")
