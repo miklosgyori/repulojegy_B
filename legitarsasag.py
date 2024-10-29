@@ -1,4 +1,5 @@
-from . import *
+from jarat import Jarat
+
 
 class LegiTarsasag:
     """

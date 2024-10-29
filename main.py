@@ -6,4 +6,5 @@ from foglalasirendszer import FoglalasiRendszer
 
 if __name__ == '__main__':
     foglalasi_rendszer = FoglalasiRendszer()
+    print(foglalasi_rendszer)
 

@@ -1,4 +1,6 @@
-from . import *
+from  legitarsasag import LegiTarsasag
+from jarat import Jarat
+from jegyfoglalas import JegyFoglalas
 
 
 class FoglalasiRendszer:

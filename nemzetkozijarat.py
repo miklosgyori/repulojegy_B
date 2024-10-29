@@ -6,10 +6,10 @@ class NemzetkoziJarat(Jarat):
         megegyeznek az ososztalyeval (Jarat)
     """
 
-
-    def __init__(self, jaratszam: int, legitarsasag: LegiTarsasag, celallomas: str,
-                 indulaskapacitas: Dict[datetime, int], jegyar: int):
+    def __init__(self, legitarsasagnev:str , jaratszam: int, indulasiallomas: str, celallomas: str,
+                 indulas: datetime, kapacitas: int, jegyar: int):
         if jegyar < 100000:
             print("Figyelem: alacsony jegyar nemzetkozi jaratra!")
         else:
-            super().__init__(jaratszam, legitarsasag, celallomas, indulaskapacitas, indulaskapacitas, jegyar)
+            super().__init__(self, legitarsasagnev, jaratszam, indulasiallomas, celallomas,
+                 indulas, kapacitas, jegyar)

@@ -1,4 +1,4 @@
-from . import *
+from jarat import Jarat
 from datetime import datetime
 
 
