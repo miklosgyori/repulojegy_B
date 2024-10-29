@@ -1,5 +1,5 @@
+from . import *
 from abc import ABC
-from legitarsasag import LegiTarsasag
 from typing import Dict
 from datetime import datetime
 

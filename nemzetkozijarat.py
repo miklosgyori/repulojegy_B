@@ -1,6 +1,3 @@
-from jarat import Jarat
-
-
 class NemzetkoziJarat(Jarat):
     """
     Nemzetkozi jaratokra vonatkozo osztaly, magasabb jegyarakkal.
@@ -14,7 +11,5 @@ class NemzetkoziJarat(Jarat):
                  indulaskapacitas: Dict[datetime, int], jegyar: int):
         if jegyar < 100000:
             print("Figyelem: alacsony jegyar nemzetkozi jaratra!")
-        if celallomas in celallomasokBelfold:
-            print("Hiba! Ez belfoldi celallomas! Nem jott letre a jarat.")
         else:
             super().__init__(jaratszam, legitarsasag, celallomas, indulaskapacitas, indulaskapacitas, jegyar)

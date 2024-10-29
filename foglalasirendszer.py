@@ -1,9 +1,15 @@
+from . import *
+
+
 class FoglalasiRendszer:
     """
-    Singleton osztaly az alapveto adatok tarolasara es folyamatok mukodtetesere.
+    Singleton osztaly az alapveto adatok tarolasara es az alapveto funkciok mukodtetesere.
     """
     _instance = None
     _initialized = False
+    legitarsasagok: list[LegiTarsasag] = []
+    jaratok: list[Jarat] = []
+    foglalasok: list[JegyFoglalas] = []
 
     def __new__(cls):
         if not cls._instance:
@@ -12,7 +18,5 @@ class FoglalasiRendszer:
 
     def __init__(self):
         if not self._initialized:
-            self.celallomasokBelfold: list[str] = []
-            self.foglalasok: list[int] = []
             self._initialized = True
-            print("Foglalasi rendszer letrejott.")
+            print("\nFoglalasi rendszer letrejott.")

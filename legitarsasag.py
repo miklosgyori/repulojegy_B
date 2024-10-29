@@ -1,12 +1,11 @@
-from jarat import Jarat
-
+from . import *
 
 class LegiTarsasag:
     """
     LegiTarsasag osztaly: tartalmazza a járatokat és saját attribútumot, mint például a légitársaság neve.
 
     Attributumok:
-        nev (str): legitarsassag neve
+        nev (str): legitarsasag neve
         jaratok (list[Jarat]): legitarsasag jaratai
     """
 

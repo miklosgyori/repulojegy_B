@@ -1,5 +1,5 @@
+from . import *
 from datetime import datetime
-from jarat import Jarat
 
 
 class JegyFoglalas:
