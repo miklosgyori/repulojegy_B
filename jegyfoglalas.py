@@ -1,5 +1,4 @@
 from jarat import Jarat
-from datetime import datetime
 
 
 class JegyFoglalas:
@@ -10,11 +9,12 @@ class JegyFoglalas:
         szam (int): foglalas szama
         nev (str): utas neve
         jarat (Jarat): jarat
-        indulas (datetime): indulasi datum es ido
     """
 
-    def __init__(self, szam: int, nev: str, jarat: Jarat, indulas: datetime):
-        self.szam = szam
+    foglalasok_szama: int = 0
+
+    def __init__(self, nev: str, jarat: Jarat):
+        self.szam = self.__class__.foglalasok_szama + 1
         self.nev = nev
         self.jarat = jarat
-        self.indulas = indulas
+        self.__class__.foglalasok_szama += 1
