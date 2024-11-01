@@ -22,5 +22,5 @@ class LegiTarsasag:
             for jarat in self.jaratok:
                 jaratokstring += f"\t{jarat}\n"
         else:
-            jaratokstring += "(meg nincs jarat)"
+            jaratokstring += "\t(meg nincs jarat)"
         return f"legitarsasag neve: {self.nev}; jaratok: \n{jaratokstring}"

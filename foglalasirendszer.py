@@ -1,4 +1,4 @@
-from  legitarsasag import LegiTarsasag
+from legitarsasag import LegiTarsasag
 from jarat import Jarat
 from jegyfoglalas import JegyFoglalas
 
@@ -22,3 +22,4 @@ class FoglalasiRendszer:
         if not self._initialized:
             self._initialized = True
             print("\nFoglalasi rendszer letrejott.")
+
