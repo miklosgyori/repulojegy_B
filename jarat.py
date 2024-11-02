@@ -27,5 +27,5 @@ class Jarat(ABC):
         print("Jarat letrejott.")
 
     def __str__(self):
-        return (f"jarat kod: {self.legitarsasagnev}-{self.jaratszam}: {self.indulasiallomas} --> {self.celallomas}; "
+        return (f"jaratszam: {self.jaratszam}; legitarsasag: {self.legitarsasagnev}; {self.indulasiallomas} --> {self.celallomas}; "
                 f"indulas: {self.indulas}; szabad helyek: {self.kapacitas}; ar: {self.jegyar}")
