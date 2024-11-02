@@ -1,5 +1,6 @@
 import utils
-
+from foglalasirendszer import FoglalasiRendszer
 
 if __name__ == '__main__':
-    utils.inicializal()
+    foglalasi_rendszer = FoglalasiRendszer()
+    utils.inicializal(foglalasi_rendszer)

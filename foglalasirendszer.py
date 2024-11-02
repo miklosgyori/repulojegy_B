@@ -1,5 +1,4 @@
 from legitarsasag import LegiTarsasag
-from jarat import Jarat
 from jegyfoglalas import JegyFoglalas
 
 
@@ -9,8 +8,8 @@ class FoglalasiRendszer:
     """
     _instance = None
     _initialized = False
+    jaratok_szama = 0
     legitarsasagok: list[LegiTarsasag] = []
-    jaratok: list[Jarat] = []
     foglalasok: list[JegyFoglalas] = []
 
     def __new__(cls):

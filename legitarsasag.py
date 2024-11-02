@@ -14,7 +14,7 @@ class LegiTarsasag:
     def __init__(self, nev: str):
         self.nev = nev
         self.jaratok: List[Jarat] = []
-        print("Legitarsasag letrejott.")
+        print("\nLegitarsasag letrejott.")
 
     def __str__(self):
         jaratokstring = ""
