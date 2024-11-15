@@ -21,4 +21,3 @@ class FoglalasiRendszer:
         if not self._initialized:
             self._initialized = True
             print("\nFoglalasi rendszer letrejott.")
-
