@@ -33,6 +33,7 @@ def foglal_jegyet(foglalasi_rendszer: FoglalasiRendszer):
     print("Listazom a jaratokat, legitarsasagok szerint:")
     for legitarsasag in foglalasi_rendszer.legitarsasagok:
         print(legitarsasag)
+    jarat = input("Add meg a jarat szamat, amelyre foglalni akarsz, majd nyomj ENTER-t!")
     # TODO logika!!!
 
 
@@ -41,6 +42,7 @@ def lemond_foglalast(foglalasi_rendszer: FoglalasiRendszer):
     print("Az ervenyes foglalasok:")
     for foglalas in foglalasi_rendszer.foglalasok:
         print(foglalas)
+    torlendo = input("\nAdd meg a torlendo foglalas szamat,majd nyomj ENTER-t!")
     # TODO logika!!!
 
 
