@@ -5,8 +5,7 @@ class NemzetkoziJarat(Jarat):
     """
     Nemzetkozi jaratokra vonatkozo osztaly, magasabb jegyarakkal.
 
-    Attributumok:
-        megegyeznek az ososztalyeval (Jarat)
+    Attributumok: megegyeznek az ososztalyeval (Jarat)
     """
 
     def __init__(self, legitarsasagnev: str, indulasiallomas: str, celallomas: str,

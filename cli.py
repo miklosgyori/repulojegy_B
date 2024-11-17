@@ -1,4 +1,5 @@
 import sys
+from utils import letrehoz_foglalas, torol_foglalas
 
 from foglalasirendszer import FoglalasiRendszer
 
@@ -10,7 +11,7 @@ def mutat_menu(foglalasi_rendszer: FoglalasiRendszer):
     print("\n")
     print("-" * 30)
     print("MENU")
-    print("1) Jegy foglalasa: 1")
+    print("1) Jegy foglalasa (jaratok listazasaval): 1")
     print("2) Foglalas lemondasa: 2")
     print("3) Foglalasok listazasa: 3")
     print("X) Kilepes a programbol: X")
@@ -33,8 +34,9 @@ def foglal_jegyet(foglalasi_rendszer: FoglalasiRendszer):
     print("Listazom a jaratokat, legitarsasagok szerint:")
     for legitarsasag in foglalasi_rendszer.legitarsasagok:
         print(legitarsasag)
-    jarat = input("Add meg a jarat szamat, amelyre foglalni akarsz, majd nyomj ENTER-t!")
-    # TODO logika!!!
+    jaratszam = int(input("Add meg a jarat szamat, amelyre foglalni akarsz, majd nyomj ENTER-t!"))
+    utasnev = input("Add meg az utas nevet, majd nyomj ENTER-t!")
+    letrehoz_foglalas(utasnev, jaratszam, foglalasi_rendszer)
 
 
 def lemond_foglalast(foglalasi_rendszer: FoglalasiRendszer):
@@ -42,9 +44,8 @@ def lemond_foglalast(foglalasi_rendszer: FoglalasiRendszer):
     print("Az ervenyes foglalasok:")
     for foglalas in foglalasi_rendszer.foglalasok:
         print(foglalas)
-    torlendo = input("\nAdd meg a torlendo foglalas szamat,majd nyomj ENTER-t!")
-    # TODO logika!!!
-
+    torlendo = int(input("\nAdd meg a torlendo foglalas szamat, majd nyomj ENTER-t!"))
+    torol_foglalas(torlendo, foglalasi_rendszer)
 
 def listaz_foglalast(foglalasi_rendszer: FoglalasiRendszer):
     print("\n*** Foglalasok listazasa: ***\n")

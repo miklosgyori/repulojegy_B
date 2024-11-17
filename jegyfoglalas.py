@@ -15,7 +15,6 @@ class JegyFoglalas:
         self.utasnev = utasnev
         self.jaratszam = jaratszam
         self.__class__.foglalasok_szama += 1
-        print("\nFoglalas letrejott.")
 
     def __str__(self):
-        return f"foglalas szama: {self.szam}; utasnev: {self.utasnev}; jaratszam: {self.jaratszam}"
+        return f"Foglalas szama: {self.szam}; utasnev: {self.utasnev}; jaratszam: {self.jaratszam}"
